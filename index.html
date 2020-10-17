@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inscription au Club-Informatique - Lycée George-Sand</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="title" content="Inscription au Club-Informatique - Lycée George-Sand">
+	<meta name="description" content="Formulaire d'inscription au club d'informatique du Lycée George-Sand.">
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://lyc-sand.github.io/club-info/">
+	<meta property="og:title" content="Inscription au Club-Informatique - Lycée George-Sand">
+	<meta property="og:description" content="Formulaire d'inscription au club d'informatique du Lycée George-Sand.">
+	<meta property="og:image" content="images/banner.png">
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="https://lyc-sand.github.io/club-info/">
+	<meta property="twitter:title" content="Inscription au Club-Informatique - Lycée George-Sand">
+	<meta property="twitter:description" content="Formulaire d'inscription au club d'informatique du Lycée George-Sand.">
+	<meta property="twitter:image" content="images/banner.png">
+
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="plugins/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="plugins/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="plugins/select2/select2.min.css">
+	<link rel="stylesheet" href="plugins/sweetalert/sweetalert2.min.css" id="theme-styles">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+	<!-- favicons
+	================================================== -->
+	<link rel="shortcut icon" href="siteicons/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="siteicons/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="siteicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="siteicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="siteicons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="siteicons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="siteicons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="siteicons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="siteicons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="siteicons/apple-touch-icon-180x180.png">
+</head>
+<body>
+
+	<div class="contact1">
+		<div class="container-contact1">
+			<div class="contact1-pic js-tilt" data-tilt>
+				<img src="images/server-linux.svg" alt="linux logo">
+			</div>
+
+			<iframe width="0" height="0" border="0" name="notload" id="notload" style="display: none;"></iframe>
+
+			<form class="contact1-form validate-form" method="POST" action="https://script.google.com/macros/s/AKfycbx4LekayppmaZUQW7r1Lp6W-jLeC2uX5Wb6P63VP6F7RQ81c74/exec" target="notload" onSubmit="inscription();">
+				<span class="contact1-form-title">
+					Je m'inscris, au club d'informatique.
+				</span>
+
+				<div class="wrap-input1 validate-input" data-validate = "Le prénom est requis.">
+					<input id="prenom" class="input1" type="text" name="prenom" placeholder="Prénom" maxlength="50" required>
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="wrap-input1 validate-input" data-validate = "Le nom est requis.">
+					<input class="input1" type="text" name="nom" placeholder="Nom" maxlength="50" required>
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="wrap-input1 validate-input" data-validate = "Le nom est requis.">
+					<ul><b>Classe :</b></ul>
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div style="display: none;" id="classe_input">
+
+				</div>
+
+				<div class="wrap-input1 validate-input" data-validate = "La classe est requise.">
+					<input type="button" id="classe-scolaire-1" class="btn btn-outline-secondary seconde" value="2nd" onclick="seconde();" required></input>
+					<input type="button" id="classe-scolaire-2" class="btn btn-outline-secondary premiere" value="Première" onclick="premiere();" required></input>
+					<input type="button" id="classe-scolaire-3" class="btn btn-outline-secondary terminale" value="Terminale" onclick="terminale();" required></input>
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="wrap-input1 validate-input" data-validate = "Une présentation ou un message de motivation est requis.">
+					<textarea maxlength="500" class="input1" name="message" placeholder="Motivation ou présentation" required></textarea>
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="container-contact1-form-btn">
+					<button class="contact1-form-btn" onclick="error_inscription();" type="submit">
+						<span>
+							Je m'inscris
+							<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+						</span>
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+
+
+	<script src="plugins/jquery/jquery-3.2.1.min.js"></script>
+	<script src="plugins/bootstrap/js/popper.js"></script>
+	<script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script src="plugins/select2/select2.min.js"></script>
+	<script src="plugins/tilt/tilt.jquery.min.js"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+	<script src="plugins/sweetalert/sweetalert2.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>
